@@ -27,13 +27,14 @@ class TestBear < MiniTest::Test
   end
 
   def test_remove_fish_from_river
-    assert_equal(@salmon, @rufus.remove_fish_from_river(@nile, @salmon))
-    assert_equal(@tuna, @gummy_bear.remove_fish_from_river(@nile, @tuna))
+    assert_equal([[@salmon]], @rufus.remove_fish_from_river(@nile, @salmon))
+    assert_equal([[@tuna]], @gummy_bear.remove_fish_from_river(@nile, @tuna))
+    assert_equal([[@tuna, @salmon]], @winnie_the_pooh.remove_fish_from_river(@nile, @tuna, @salmon))
   end
 
   def test_add_fish_to_tummy
     assert_equal([@salmon], @rufus.add_fish_to_tummy(@salmon))
-    assert_equal([@tuna, @perch], @winnie_the_pooh.add_fish_to_tummy([@tuna, @perch]))
+    assert_equal([@tuna, @perch], @winnie_the_pooh.add_fish_to_tummy(@tuna, @perch))
   end
 
 end
