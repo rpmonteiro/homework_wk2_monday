@@ -12,6 +12,8 @@ class TestRiver < MiniTest::Test
     perch = Fish.new('Perch')
 
     @delicious_three = [salmon, tuna, perch]
+
+    @nile = River.new(@delicious_three)
   end
 
 end
