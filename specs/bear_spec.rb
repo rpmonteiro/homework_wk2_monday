@@ -12,4 +12,12 @@ class TestBear < MiniTest::Test
     @rufus = Bear.new('Rufus', 'Grizzly')
   end
 
+  def test_roar
+    assert_equal("Miau?", @rufus.roar)
+  end
+
+  def test_evil_roar
+    assert_equal("RRRROAAAARRRRR!!!!!!!!!", @gummy_bear.imma_gonna_kill_you)
+  end
+
 end

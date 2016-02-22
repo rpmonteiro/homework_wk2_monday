@@ -5,4 +5,12 @@ class Bear
     @type = type
   end
 
+  def roar
+    return "Miau?"
+  end
+
+  def imma_gonna_kill_you
+    return "RRRROAAAARRRRR!!!!!!!!!"
+  end
+
 end
